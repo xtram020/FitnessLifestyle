@@ -1,0 +1,65 @@
+.reservation-page{
+    min-height: calc(100vh - 80px);
+    padding: 6rem 12% 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reservation-card{
+    width: 100%;
+    max-width: 720px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(199, 250, 255, 0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 0 25px rgba(199, 250, 255, 0.12);
+}
+
+.reservation-card h1{
+    font-size: 2.2rem;
+    margin-bottom: 1.25rem;
+}
+
+.reservation-error{
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    background: rgba(240, 169, 147, 0.15);
+    border: 1px solid rgba(240, 169, 147, 0.45);
+    color: #fff;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select{
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    border: 2px solid rgba(199, 250, 255, 0.25);
+    background: rgba(0,0,0,0.25);
+    color: var(--text-color);
+    outline: none;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus{
+    border-color: rgba(199, 250, 255, 0.8);
+    box-shadow: 0 0 20px rgba(199, 250, 255, 0.2);
+}
+
+.form-actions{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+

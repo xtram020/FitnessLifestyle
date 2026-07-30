@@ -1,0 +1,441 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 7rem 1.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #141414;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact .content p {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+
+
+.contact .container{
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* levý sloupec s adresou/telefonem/mapou */
+.contact .container .info{
+  width: 48%;
+  color: #fff;
+}
+
+
+.contact .container .sci{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+
+.contact .container .map iframe{
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  display: block;
+
+  box-shadow: 0 0 24px rgba(0,0,0,0.35);
+  border: 1px solid rgba(199,250,255,0.12);
+}
+
+
+
+
+.container .contactForm.auth{
+  width: min(460px, 100%);
+  padding: 28px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(199,250,255,0.22);
+  box-shadow:
+    0 0 30px rgba(0,0,0,0.45),
+    0 0 18px rgba(199,250,255,0.10);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+.container .contactForm.auth::before,
+.container .contactForm.auth::after{
+  content: none !important;
+}
+
+.auth__form h2{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.auth__msg{
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(199,250,255,0.18);
+  color: #fff;
+}
+
+
+.container .contactForm.auth .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 22px;
+}
+
+.container .contactForm.auth .inputBox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(199,250,255,0.45);
+  color: #fff;
+  outline: none;
+}
+
+.container .contactForm.auth .inputBox span{
+  position: absolute;
+  left: 0;
+  top: 6px;
+  pointer-events: none;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  transition: 0.25s ease;
+}
+
+.container .contactForm.auth .inputBox input:focus ~ span,
+.container .contactForm.auth .inputBox input:not(:placeholder-shown) ~ span{
+  color: #C7FAFF;
+  transform: translateY(-18px);
+  font-size: 0.9rem;
+}
+
+.container .contactForm.auth .inputBox input:focus{
+  border-bottom-color: #C7FAFF;
+  box-shadow: 0 10px 20px rgba(199,250,255,0.08);
+}
+
+
+.auth__btn{
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 16px;
+
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #C7FAFF;
+  color: #111;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 18px rgba(199,250,255,0.35);
+}
+
+.auth__btn:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(199,250,255,0.55);
+}
+
+.auth__switch{
+  margin-top: 12px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+.auth__switch a{
+  color: #C7FAFF;
+  text-decoration: none;
+}
+
+.auth__switch a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+/* dvě karty */
+.contact .container .info,
+.contact .container .rightCol{
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(199,250,255,0.16);
+  box-shadow: 0 0 26px rgba(0,0,0,0.35);
+  padding: 22px;
+}
+
+.contact .container .rightCol{
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+
+@media (max-width: 991px){
+  .contact .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .contact .container .info,
+  .contact .container .rightCol {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact .container .rightCol .contactForm.auth {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* levý sloupec */
+.contact .container .info{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+.contact .container .info .box{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 14px 16px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(199,250,255,0.12);
+  box-shadow: 0 0 18px rgba(0,0,0,0.25);
+}
+
+
+.contact .container .info .box .icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(199,250,255,0.10);
+  border: 1px solid rgba(199,250,255,0.20);
+  color: #C7FAFF;
+
+  flex: 0 0 auto;
+}
+
+.contact .container .info .box .icon b{
+  display: none !important;
+}
+
+.contact .container .info .box .icon i{
+  font-size: 18px;
+}
+
+.contact .container .info .box .text h3{
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.contact .container .info .box .text p{
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.45;
+}
+
+
+.contact .container .info .box .text a{
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+}
+.contact .container .info .box .text a:hover{
+  color: #C7FAFF;
+  text-decoration: underline;
+}
+
+/* connect with us */
+.contact .container .info .txt{
+  margin-top: 10px;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #fff;
+}
+
+.contact .container .info .sci{
+  margin-top: 0;
+  gap: 10px;
+}
+
+.contact .container .info .sci a{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(199,250,255,0.25);
+  background: rgba(255,255,255,0.03);
+  color: #C7FAFF;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.contact .container .info .sci a:hover{
+  transform: translateY(-2px);
+  background: rgba(199,250,255,0.10);
+  box-shadow: 0 0 18px rgba(199,250,255,0.22);
+}
+
+/* mapa */
+.contact .container .info .map{
+  margin-top: 8px;
+}
+.contact .container .info .map iframe{
+  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.35);
+  border: 1px solid rgba(199,250,255,0.12);
+}
+
+
+.container .contactForm.auth textarea{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(199,250,255,0.45);
+  color: #fff;
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+}
+
+.container .contactForm.auth textarea:focus{
+  border-bottom-color: #C7FAFF;
+}
+
+.container .contactForm.auth textarea:focus ~ span,
+.container .contactForm.auth textarea:valid ~ span{
+  color: #C7FAFF;
+  transform: translateY(-18px);
+  font-size: 0.9rem;
+}
+
+
+.contact .container .rightCol .contactForm.auth{
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 6.5rem 1rem 2rem;
+  }
+
+  .contact .content h2 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .contact .content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .contact .container {
+    margin-top: 24px;
+    gap: 18px;
+  }
+
+  .contact .container .info,
+  .contact .container .rightCol {
+    padding: 16px;
+  }
+
+  .contact .container .info .box {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .contact .container .info .map iframe {
+    height: 220px;
+  }
+
+   .contact .container .rightCol .contactForm.auth {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .auth__form h2 {
+    font-size: 1.8rem;
+  }
+}
+
+ 
+@media (max-width: 375px) {
+  .contact .content h2 {
+    font-size: 1.9rem;
+  }
+
+  .contact .content p {
+    font-size: 0.95rem;
+  }
+
+  .contact .container .info .map iframe {
+    height: 200px;
+  }
+}

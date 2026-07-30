@@ -1,0 +1,145 @@
+.admin-wrap{
+  padding: 4.5rem 10%;
+  color: #fff;
+}
+
+.admin-title{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.admin-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.admin-card{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(199,250,255,0.15);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.admin-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table tr{
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-table td{
+  padding: 1rem;
+}
+
+.admin-link{
+  color: #c7faff;
+  text-decoration: none;
+}
+
+.admin-link:hover{
+  text-decoration: underline;
+}
+
+.admin-form label{
+  display:block;
+  margin-top: 1rem;
+}
+
+.admin-form input,
+.admin-form textarea{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+}
+
+.admin-btn {
+  margin-top: 1.6rem;
+  width: auto;
+  padding: 0.5rem 1rem;
+  float: right;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+
+  border-radius: 12px;
+  border: none;
+
+  background: #9ecfd6;
+  color: #111;
+
+  transition: 0.25s;
+  box-shadow: none; 
+}
+
+
+.admin-preview{
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 900px){
+  .admin-wrap{
+    padding: 3rem 5%;
+  }
+
+  .admin-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .admin-title{
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px){
+  .admin-wrap{
+    padding: 2rem 1rem;
+  }
+
+  .admin-title{
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .admin-card{
+    padding: 1.2rem;
+  }
+
+  .admin-table td{
+    padding: 0.75rem 0.4rem;
+    font-size: 0.95rem;
+    vertical-align: top;
+  }
+
+  .admin-actions{
+    white-space: nowrap;
+  }
+
+  .admin-btn{
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (max-width: 480px){
+  .admin-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .sep{
+    display: none;
+  }
+}
